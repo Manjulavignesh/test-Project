@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import Input from "./components/Input";
 import ProductList from "./components/ProductList";
-import Products from "./components/Products";
 const initialProducts = [];
 
 const App = () => {
   const [productDetail, setProductDetail] = useState(initialProducts);
   const [foodProductDetail, setFoodProductDetail] = useState(initialProducts);
   const [cosmoticDetail, setCosmoticDetail] = useState(initialProducts);
-  const isDeleted=false;
   const isElectronics = true;
   const isfood = true;
   const isSkinCare = true;
@@ -27,7 +25,6 @@ const App = () => {
       });
     }
   };
-  
 
   return (
     <React.Fragment>

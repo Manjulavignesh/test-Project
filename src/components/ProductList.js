@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Products from "./Products";
 const ProductList = (props) => {
-  
   return (
     <React.Fragment>
       <h2>{props.catagoryHeader}</h2>
@@ -11,7 +10,6 @@ const ProductList = (props) => {
           price={item.price}
           name={item.name}
           catagory={item.catagory}
-          
         />
       ))}
     </React.Fragment>

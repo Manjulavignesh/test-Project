@@ -28,19 +28,35 @@ const Input = (props) => {
       name: enteredProductName,
       catagory: enteredcatagory,
     };
-    localStorage.setItem(enteredProductId,JSON.stringify(obj))
+    localStorage.setItem(enteredProductId, JSON.stringify(obj));
     props.onSubmitHandler(obj);
+    setenteredProductId("");
+    setenteredSellingPrice("");
+    setenteredProductName("");
+    setenteredcatagory("");
   };
   return (
     <form onSubmit={submitHandler}>
       <label>Product Id:</label>
-      <input type="number" onChange={productChageHandler} />
+      <input
+        type="number"
+        value={enteredProductId}
+        onChange={productChageHandler}
+      />
       <label>SellingPrice:</label>
-      <input type="number" onChange={priceChangeHandler} />
+      <input
+        type="number"
+        value={enteredSellingPrice}
+        onChange={priceChangeHandler}
+      />
       <label>Product Name:</label>
-      <input type="text" onChange={productNameHandler} />
+      <input
+        type="text"
+        value={enteredProductName}
+        onChange={productNameHandler}
+      />
       <label>ChooseCatagory</label>
-      <select onChange={filteredcatagoryhandler}>
+      <select value={enteredcatagory} onChange={filteredcatagoryhandler}>
         <option></option>
         <option>Electronics</option>
         <option>food</option>
